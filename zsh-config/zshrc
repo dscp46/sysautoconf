@@ -36,6 +36,8 @@ alias md='mkdir'
 alias rd='rmdir'
 alias upgrade='apt-get update && apt-get upgrade && apt-get clean'
 
+alias orphans='apt list --installed "?not(?origin(debian))" -a | grep local'
+
 if [[ "$PROTOCOL" != "AX.25" ]]; then
   # De la couleur pour grep
   alias grep='grep --color=auto'
