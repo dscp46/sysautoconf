@@ -38,6 +38,7 @@ alias upgrade='apt-get update && apt-get upgrade && apt-get clean'
 
 alias orphans='apt list --installed "?not(?origin(debian))" -a | grep local'
 alias sspub="ss -antlup | grep -v '\(::1\|127\.0\.0\.\)'"
+alias randpass='cat /dev/urandom | tr -dc "0-z" | fold -w 24 | head'
 
 if [[ "$PROTOCOL" != "AX.25" ]]; then
   # De la couleur pour grep
